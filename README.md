@@ -1,4 +1,4 @@
-# Supermarket Analysis with SQL
+# Supermarket Analysis using SQL
 
 ## Overview
 In this project, I have analyzed superstore sales data using SQL. Importing datasets into a PostgreSQL database and running different queries over it to find actionable insights on sales trends, customer behavior, product performance, shipping time, and location-wise / category-wise sales breakdown
