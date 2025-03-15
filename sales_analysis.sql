@@ -1,12 +1,9 @@
+-- Step 1: Only review the what type of data is
 -- General Queries
 select COUNT(*) FROM superstores_sales;
 select * from superstores_sales;
 
--- Step 1: Convert xlsx format to csv format to table using python script
--- Step 2: Only review the what type of data is
--- Step 2: Make a exacte new table not use the raw data
-
--- Step 3: Change datatype
+-- Step 2: Change datatype
 ALTER TABLE superstores_sales 
 ALTER COLUMN "Order Date" 
 TYPE DATE 
@@ -32,7 +29,7 @@ USING "Sales"::NUMERIC;
 -- Extract Day from Ship Date
 SELECT EXTRACT(DAY FROM "Ship Date") AS order_day FROM superstores_sales;
 
--- Step 4: Analysis Queries
+-- Step 3: Analysis Queries
 -- Top 3 Highest Selling Month
 WITH MonthlySales AS (
     SELECT EXTRACT(MONTH FROM "Order Date") AS month, "Sales"
